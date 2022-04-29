@@ -40,7 +40,6 @@ var fightOrSkip = function() {
   return false;
 };
 
-// fight function (now with parameter for enemy's object holding name, health, and attack values)
 var fight = function(enemy) {
   // keep track of who goes first
   var isPlayerTurn = true;
@@ -89,7 +88,7 @@ var fight = function(enemy) {
     } else {
       var damage = randomNumber(enemy.attack - 3, enemy.attack);
 
-      // remove enemy's health by subtracting the amount we set in the damage variable
+      // remove player's health by subtracting the amount we set in the damage variable
       playerInfo.health = Math.max(0, playerInfo.health - damage);
       console.log(
         enemy.name +
